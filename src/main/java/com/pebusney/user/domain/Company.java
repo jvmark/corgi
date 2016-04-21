@@ -29,12 +29,6 @@ public class Company {
   @Column(nullable = false)
   private String desc;
 
-  @Column(nullable = false)
-  private Date gmtCreate;
-
-  @Column(nullable = false)
-  private Date gmtUpdate;
-
   public long getId() {
     return id;
   }
@@ -67,19 +61,4 @@ public class Company {
     this.desc = desc;
   }
 
-  public Date getGmtCreate() {
-    return gmtCreate;
-  }
-
-  public void setGmtCreate(Date gmtCreate) {
-    this.gmtCreate = gmtCreate;
-  }
-
-  public Date getGmtUpdate() {
-    return gmtUpdate;
-  }
-
-  public void setGmtUpdate(Date gmtUpdate) {
-    this.gmtUpdate = gmtUpdate;
-  }
 }

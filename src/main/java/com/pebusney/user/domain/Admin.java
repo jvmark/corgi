@@ -27,12 +27,6 @@ public class Admin {
   @Column(nullable = false)
   private String password;
 
-  @Column(nullable = false, name = "gmtCreate")
-  private Date gmtCreate;
-
-  @Column(nullable = false, name = "gmtUpdate")
-  private Date gmtUpdate;
-
   public long getId() {
     return id;
   }
@@ -57,19 +51,4 @@ public class Admin {
     this.password = password;
   }
 
-  public Date getGmtCreate() {
-    return gmtCreate;
-  }
-
-  public void setGmtCreate(Date gmtCreate) {
-    this.gmtCreate = gmtCreate;
-  }
-
-  public Date getGmtUpdate() {
-    return gmtUpdate;
-  }
-
-  public void setGmtUpdate(Date gmtUpdate) {
-    this.gmtUpdate = gmtUpdate;
-  }
 }

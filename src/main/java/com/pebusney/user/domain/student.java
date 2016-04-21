@@ -24,9 +24,6 @@ public class Student {
   private String name;
 
   @Column(nullable = false)
-  private Long stuId;
-
-  @Column(nullable = false)
   private int  age;
 
   @Column(nullable = false)
@@ -37,12 +34,6 @@ public class Student {
 
   @Column(nullable = false)
   private String nation;
-
-  @Column(nullable = false)
-  private Date gmtCreate;
-
-  @Column(nullable = false)
-  private Date gmtUpdate;
 
   public long getId() {
     return id;
@@ -58,14 +49,6 @@ public class Student {
 
   public void setName(String name) {
     this.name = name;
-  }
-
-  public Long getStuId() {
-    return stuId;
-  }
-
-  public void setStuId(Long stuId) {
-    this.stuId = stuId;
   }
 
   public int getAge() {
@@ -84,14 +67,6 @@ public class Student {
     this.sex = sex;
   }
 
-  public Date getGmtCreate() {
-    return gmtCreate;
-  }
-
-  public void setGmtCreate(Date gmtCreate) {
-    this.gmtCreate = gmtCreate;
-  }
-
   public String getPhoneNumber() {
     return phoneNumber;
   }
@@ -108,11 +83,4 @@ public class Student {
     this.nation = nation;
   }
 
-  public Date getGmtUpdate() {
-    return gmtUpdate;
-  }
-
-  public void setGmtUpdate(Date gmtUpdate) {
-    this.gmtUpdate = gmtUpdate;
-  }
 }

@@ -41,12 +41,6 @@ public class Recruitment {
   @Column(nullable = false)
   private String extra;
 
-  @Column(nullable = false)
-  private Date gmtCreate;
-
-  @Column(nullable = false)
-  private Date gmtUpdate;
-
   public long getId() {
     return id;
   }
@@ -111,19 +105,4 @@ public class Recruitment {
     this.extra = extra;
   }
 
-  public Date getGmtUpdate() {
-    return gmtUpdate;
-  }
-
-  public void setGmtUpdate(Date gmtUpdate) {
-    this.gmtUpdate = gmtUpdate;
-  }
-
-  public Date getGmtCreate() {
-    return gmtCreate;
-  }
-
-  public void setGmtCreate(Date gmtCreate) {
-    this.gmtCreate = gmtCreate;
-  }
 }
