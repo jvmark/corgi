@@ -27,10 +27,10 @@ public class Admin {
   @Column(nullable = false)
   private String password;
 
-  @Column(nullable = false)
+  @Column(nullable = false, name = "gmtCreate")
   private Date gmtCreate;
 
-  @Column(nullable = false)
+  @Column(nullable = false, name = "gmtUpdate")
   private Date gmtUpdate;
 
   public long getId() {
