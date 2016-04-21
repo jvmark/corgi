@@ -27,7 +27,7 @@ public class Company {
   private String city;
 
   @Column(nullable = false)
-  private String desc;
+  private String description;
 
   public long getId() {
     return id;
@@ -53,12 +53,11 @@ public class Company {
     this.city = city;
   }
 
-  public String getDesc() {
-    return desc;
+  public String getDescription() {
+    return description;
   }
 
-  public void setDesc(String desc) {
-    this.desc = desc;
+  public void setDescription(String description) {
+    this.description = description;
   }
-
 }

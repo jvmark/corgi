@@ -27,7 +27,7 @@ public class Recruitment {
   private String city;
 
   @Column(nullable = false)
-  private String desc;
+  private String description;
 
   @Column(nullable = false)
   private String positionName;
@@ -36,7 +36,10 @@ public class Recruitment {
   private String diplomaLimit;
 
   @Column(nullable = false)
-  private String salary;
+  private String minSalary;
+
+  @Column(nullable = false)
+  private String maxSalary;
 
   @Column(nullable = false)
   private String extra;
@@ -65,12 +68,12 @@ public class Recruitment {
     this.city = city;
   }
 
-  public String getDesc() {
-    return desc;
+  public String getDescription() {
+    return description;
   }
 
-  public void setDesc(String desc) {
-    this.desc = desc;
+  public void setDescription(String description) {
+    this.description = description;
   }
 
   public String getPositionName() {
@@ -89,12 +92,20 @@ public class Recruitment {
     this.diplomaLimit = diplomaLimit;
   }
 
-  public String getSalary() {
-    return salary;
+  public String getMinSalary() {
+    return minSalary;
   }
 
-  public void setSalary(String salary) {
-    this.salary = salary;
+  public void setMinSalary(String minSalary) {
+    this.minSalary = minSalary;
+  }
+
+  public String getMaxSalary() {
+    return maxSalary;
+  }
+
+  public void setMaxSalary(String maxSalary) {
+    this.maxSalary = maxSalary;
   }
 
   public String getExtra() {
