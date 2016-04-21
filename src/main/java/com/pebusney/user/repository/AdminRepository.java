@@ -1,17 +1,17 @@
 package com.pebusney.user.repository;
 
-import com.pebusney.user.domain.User;
+import com.pebusney.user.domain.Admin;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * @auther mark
+ * @author mark
  * @since 2016-04-03 16:25.
  */
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface AdminRepository extends JpaRepository<Admin, Long> {
 
-  User findByName(String name);
+  Admin findByName(String name);
 }
 

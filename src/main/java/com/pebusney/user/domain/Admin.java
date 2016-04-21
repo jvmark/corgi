@@ -1,6 +1,8 @@
 package com.pebusney.user.domain;
 
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,8 +14,8 @@ import javax.persistence.Table;
  * @since 2016-04-03 15:54.
  */
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "admin")
+public class Admin {
 
   @Id
   @GeneratedValue
@@ -24,6 +26,12 @@ public class User {
 
   @Column(nullable = false)
   private String password;
+
+  @Column(nullable = false)
+  private Date gmtCreate;
+
+  @Column(nullable = false)
+  private Date gmtUpdate;
 
   public long getId() {
     return id;
@@ -47,5 +55,21 @@ public class User {
 
   public void setPassword(String password) {
     this.password = password;
+  }
+
+  public Date getGmtCreate() {
+    return gmtCreate;
+  }
+
+  public void setGmtCreate(Date gmtCreate) {
+    this.gmtCreate = gmtCreate;
+  }
+
+  public Date getGmtUpdate() {
+    return gmtUpdate;
+  }
+
+  public void setGmtUpdate(Date gmtUpdate) {
+    this.gmtUpdate = gmtUpdate;
   }
 }
