@@ -17,4 +17,10 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
   Student findById(Long id);
 
   Student findByname(String name);
+
+  Student findBySno(String sno);
+
+  Student findByClassName(String className);
+
+  Student findByMajor(String major);
 }

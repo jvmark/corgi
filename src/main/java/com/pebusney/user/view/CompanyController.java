@@ -51,11 +51,20 @@ public class CompanyController {
     return new NapiRespDTO(NapiStatus.SUCCESS, companie);
   }
 
-  @RequestMapping(value = "company/save/", method = RequestMethod.GET)
+  @RequestMapping(value = "company/save/", method = RequestMethod.POST)
   public NapiRespDTO save(
       @ModelAttribute("company") Company company
   ) {
     Company company1 = companyRepository.save(company);
+
+    return new NapiRespDTO(NapiStatus.SUCCESS);
+  }
+
+  @RequestMapping(value = "company/delete/", method = RequestMethod.POST)
+  public NapiRespDTO delte(
+      @RequestParam(value = "id", required = true) Long id
+  ) {
+    companyRepository.delete(id);
 
     return new NapiRespDTO(NapiStatus.SUCCESS);
   }

@@ -42,11 +42,29 @@ public class RecruitmentController {
     return new NapiRespDTO(NapiStatus.SUCCESS, student);
   }
 
-  @RequestMapping(value = "recruitment/save/", method = RequestMethod.GET)
+  @RequestMapping(value = "recruitment/by_city/", method = RequestMethod.GET)
+  public NapiRespDTO findByCity(
+      @RequestParam(value = "city", required = true) String city
+  ) {
+    Recruitment student = recruitmentRepository.findByCity(city);
+
+    return new NapiRespDTO(NapiStatus.SUCCESS, student);
+  }
+
+  @RequestMapping(value = "recruitment/save/", method = RequestMethod.POST)
   public NapiRespDTO save(
       @ModelAttribute("recruitment") Recruitment recruitment
   ) {
     Recruitment recruitment1 = recruitmentRepository.save(recruitment);
+
+    return new NapiRespDTO(NapiStatus.SUCCESS);
+  }
+
+  @RequestMapping(value = "recruitment/delete/", method = RequestMethod.POST)
+  public NapiRespDTO delte(
+      @RequestParam(value = "id", required = true) Long id
+  ) {
+    recruitmentRepository.delete(id);
 
     return new NapiRespDTO(NapiStatus.SUCCESS);
   }

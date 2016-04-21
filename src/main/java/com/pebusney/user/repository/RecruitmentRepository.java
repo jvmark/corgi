@@ -15,4 +15,6 @@ public interface RecruitmentRepository extends JpaRepository<Recruitment, Long> 
   Page<Recruitment> findAll(Pageable pageable);
 
   Recruitment findById(Long id);
+
+  Recruitment findByCity(String city);
 }

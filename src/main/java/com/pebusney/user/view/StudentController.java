@@ -42,7 +42,7 @@ public class StudentController {
     return new NapiRespDTO(NapiStatus.SUCCESS, student);
   }
 
-  @RequestMapping(value = "student/by_name", method = RequestMethod.GET)
+  @RequestMapping(value = "student/by_name/", method = RequestMethod.GET)
   public NapiRespDTO findByName(
       @RequestParam(value = "name", required = true) String name
   ) {
@@ -51,11 +51,47 @@ public class StudentController {
     return new NapiRespDTO(NapiStatus.SUCCESS, student);
   }
 
-  @RequestMapping(value = "student/save/", method = RequestMethod.GET)
+  @RequestMapping(value = "student/by_sno/", method = RequestMethod.GET)
+  public NapiRespDTO findBySno(
+      @RequestParam(value = "sno", required = true) String sno
+  ) {
+    Student student = studentRepository.findBySno(sno);
+
+    return new NapiRespDTO(NapiStatus.SUCCESS, student);
+  }
+
+  @RequestMapping(value = "student/by_classname", method = RequestMethod.GET)
+  public NapiRespDTO findByClasName(
+      @RequestParam(value = "class_name", required = true) String className
+  ) {
+    Student student = studentRepository.findByClassName(className);
+
+    return new NapiRespDTO(NapiStatus.SUCCESS, student);
+  }
+
+  @RequestMapping(value = "student/by_major/", method = RequestMethod.GET)
+  public NapiRespDTO findByMajor(
+      @RequestParam(value = "major", required = true) String major
+  ) {
+    Student student = studentRepository.findByMajor(major);
+
+    return new NapiRespDTO(NapiStatus.SUCCESS, student);
+  }
+
+  @RequestMapping(value = "student/save/", method = RequestMethod.POST)
   public NapiRespDTO save(
       @ModelAttribute("student") Student student
   ) {
     Student save = studentRepository.save(student);
+
+    return new NapiRespDTO(NapiStatus.SUCCESS);
+  }
+
+  @RequestMapping(value = "student/delete/", method = RequestMethod.POST)
+  public NapiRespDTO delte(
+      @RequestParam(value = "id", required = true) Long id
+  ) {
+    studentRepository.delete(id);
 
     return new NapiRespDTO(NapiStatus.SUCCESS);
   }
