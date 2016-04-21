@@ -31,6 +31,9 @@ public class Student {
   private String name;
 
   @Column(nullable = false)
+  private String password;
+
+  @Column(nullable = false)
   private int  age;
 
   @Column(nullable = false)
@@ -80,6 +83,14 @@ public class Student {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
   }
 
   public int getAge() {

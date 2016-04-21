@@ -17,4 +17,6 @@ public interface RecruitmentRepository extends JpaRepository<Recruitment, Long> 
   Recruitment findById(Long id);
 
   Recruitment findByCity(String city);
+
+  Recruitment findByCompanyId(Long companyId);
 }

@@ -24,6 +24,9 @@ public class Company {
   private String name;
 
   @Column(nullable = false)
+  private String password;
+
+  @Column(nullable = false)
   private String city;
 
   @Column(nullable = false)
@@ -49,6 +52,14 @@ public class Company {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
   }
 
   public String getCity() {

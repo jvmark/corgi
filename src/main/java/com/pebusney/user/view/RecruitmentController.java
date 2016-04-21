@@ -51,6 +51,16 @@ public class RecruitmentController {
     return new NapiRespDTO(NapiStatus.SUCCESS, student);
   }
 
+  @RequestMapping(value = "recruitment/by_companyid/", method = RequestMethod.GET)
+  public NapiRespDTO findBycompanyid(
+      @RequestParam(value = "companyid", required = true) Long companyid
+  ) {
+    Recruitment student = recruitmentRepository.findByCompanyId(companyid);
+
+    return new NapiRespDTO(NapiStatus.SUCCESS, student);
+  }
+
+
   @RequestMapping(value = "recruitment/save/", method = RequestMethod.POST)
   public NapiRespDTO save(
       @ModelAttribute("recruitment") Recruitment recruitment

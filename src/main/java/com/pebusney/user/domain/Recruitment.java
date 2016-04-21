@@ -24,6 +24,9 @@ public class Recruitment {
   private String companyName;
 
   @Column(nullable = false)
+  private Long companyId;
+
+  @Column(nullable = false)
   private String city;
 
   @Column(nullable = false)
@@ -58,6 +61,14 @@ public class Recruitment {
 
   public void setCompanyName(String companyName) {
     this.companyName = companyName;
+  }
+
+  public Long getCompanyId() {
+    return companyId;
+  }
+
+  public void setCompanyId(Long companyId) {
+    this.companyId = companyId;
   }
 
   public String getCity() {
