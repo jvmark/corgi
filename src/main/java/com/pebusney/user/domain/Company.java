@@ -29,6 +29,12 @@ public class Company {
   @Column(nullable = false)
   private String description;
 
+  @Column(nullable = false)
+  private String main;
+
+  @Column(nullable = false)
+  private String homePage;
+
   public long getId() {
     return id;
   }
@@ -59,5 +65,21 @@ public class Company {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public String getMain() {
+    return main;
+  }
+
+  public void setMain(String main) {
+    this.main = main;
+  }
+
+  public String getHomePage() {
+    return homePage;
+  }
+
+  public void setHomePage(String homePage) {
+    this.homePage = homePage;
   }
 }

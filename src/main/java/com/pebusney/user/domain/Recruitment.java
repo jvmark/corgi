@@ -27,19 +27,19 @@ public class Recruitment {
   private String city;
 
   @Column(nullable = false)
-  private String description;
+  private String description = "";
 
   @Column(nullable = false)
-  private String positionName;
+  private String positionName = "";
 
   @Column(nullable = false)
-  private String diplomaLimit;
+  private String diplomaLimit = "";
 
   @Column(nullable = false)
-  private String minSalary;
+  private int minSalary = 0;
 
   @Column(nullable = false)
-  private String maxSalary;
+  private int maxSalary = 0;
 
   @Column(nullable = false)
   private String extra;
@@ -92,19 +92,19 @@ public class Recruitment {
     this.diplomaLimit = diplomaLimit;
   }
 
-  public String getMinSalary() {
+  public int getMinSalary() {
     return minSalary;
   }
 
-  public void setMinSalary(String minSalary) {
+  public void setMinSalary(int minSalary) {
     this.minSalary = minSalary;
   }
 
-  public String getMaxSalary() {
+  public int getMaxSalary() {
     return maxSalary;
   }
 
-  public void setMaxSalary(String maxSalary) {
+  public void setMaxSalary(int maxSalary) {
     this.maxSalary = maxSalary;
   }
 

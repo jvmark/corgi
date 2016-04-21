@@ -1,7 +1,5 @@
 package com.pebusney.user.domain;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,6 +17,15 @@ public class Student {
   @Id
   @GeneratedValue
   private long id;
+
+  @Column(nullable = false)
+  private Long sno;
+
+  @Column(nullable = false)
+  private String className;
+
+  @Column(nullable = false)
+  private String major;
 
   @Column(nullable = false)
   private String name;
@@ -41,6 +48,30 @@ public class Student {
 
   public void setId(long id) {
     this.id = id;
+  }
+
+  public Long getSno() {
+    return sno;
+  }
+
+  public void setSno(Long sno) {
+    this.sno = sno;
+  }
+
+  public String getClassName() {
+    return className;
+  }
+
+  public void setClassName(String className) {
+    this.className = className;
+  }
+
+  public String getMajor() {
+    return major;
+  }
+
+  public void setMajor(String major) {
+    this.major = major;
   }
 
   public String getName() {

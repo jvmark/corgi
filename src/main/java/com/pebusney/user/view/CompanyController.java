@@ -5,6 +5,7 @@ import com.pebusney.common.domain.NapiStatus;
 import com.pebusney.user.domain.Company;
 import com.pebusney.user.repository.CompanyRepository;
 
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -48,5 +49,14 @@ public class CompanyController {
     Company companie = companyRepository.findByName(name);
 
     return new NapiRespDTO(NapiStatus.SUCCESS, companie);
+  }
+
+  @RequestMapping(value = "company/save/", method = RequestMethod.GET)
+  public NapiRespDTO save(
+      @ModelAttribute("company") Company company
+  ) {
+    Company company1 = companyRepository.save(company);
+
+    return new NapiRespDTO(NapiStatus.SUCCESS);
   }
 }

@@ -5,6 +5,7 @@ import com.pebusney.common.domain.NapiStatus;
 import com.pebusney.user.domain.Recruitment;
 import com.pebusney.user.repository.RecruitmentRepository;
 
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -39,5 +40,14 @@ public class RecruitmentController {
     Recruitment student = recruitmentRepository.findById(id);
 
     return new NapiRespDTO(NapiStatus.SUCCESS, student);
+  }
+
+  @RequestMapping(value = "recruitment/save/", method = RequestMethod.GET)
+  public NapiRespDTO save(
+      @ModelAttribute("recruitment") Recruitment recruitment
+  ) {
+    Recruitment recruitment1 = recruitmentRepository.save(recruitment);
+
+    return new NapiRespDTO(NapiStatus.SUCCESS);
   }
 }
