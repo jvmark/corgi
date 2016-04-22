@@ -21,22 +21,22 @@ public class Company {
   private long id;
 
   @Column(nullable = false)
-  private String name;
+  private String name = "";
 
   @Column(nullable = false)
-  private String password;
+  private String password = "";
 
   @Column(nullable = false)
-  private String city;
+  private String city = "";
 
   @Column(nullable = false)
-  private String description;
+  private String description = "";
 
   @Column(nullable = false)
-  private String main;
+  private String mail = "";
 
   @Column(nullable = false)
-  private String homePage;
+  private String homePage = "";
 
   public long getId() {
     return id;
@@ -78,12 +78,12 @@ public class Company {
     this.description = description;
   }
 
-  public String getMain() {
-    return main;
+  public String getMail() {
+    return mail;
   }
 
-  public void setMain(String main) {
-    this.main = main;
+  public void setMail(String mail) {
+    this.mail = mail;
   }
 
   public String getHomePage() {

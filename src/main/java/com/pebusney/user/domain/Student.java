@@ -22,28 +22,28 @@ public class Student {
   private Long sno;
 
   @Column(nullable = false)
-  private String className;
+  private String className = "";
 
   @Column(nullable = false)
-  private String major;
+  private String major = "";
 
   @Column(nullable = false)
-  private String name;
+  private String name = "";
 
   @Column(nullable = false)
-  private String password;
+  private String password = "";
 
   @Column(nullable = false)
-  private int  age;
+  private int  age = 0;
 
   @Column(nullable = false)
-  private int  sex;
+  private int  sex  = 0;
 
   @Column(nullable = false)
-  private String phoneNumber;
+  private String phoneNumber = "";
 
   @Column(nullable = false)
-  private String nation;
+  private String nation = "";
 
   public long getId() {
     return id;

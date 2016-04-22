@@ -24,10 +24,10 @@ public class Recruitment {
   private String companyName;
 
   @Column(nullable = false)
-  private Long companyId;
+  private Long companyId = 0L;
 
   @Column(nullable = false)
-  private String city;
+  private String city = "";
 
   @Column(nullable = false)
   private String description = "";
@@ -45,7 +45,7 @@ public class Recruitment {
   private int maxSalary = 0;
 
   @Column(nullable = false)
-  private String extra;
+  private String extra = "";
 
   public long getId() {
     return id;
