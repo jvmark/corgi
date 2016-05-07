@@ -55,7 +55,7 @@ public class RecruitmentController {
   public NapiRespDTO findBycompanyid(
       @RequestParam(value = "companyid", required = true) Long companyid
   ) {
-    Recruitment student = recruitmentRepository.findByCompanyId(companyid);
+    List<Recruitment> student = recruitmentRepository.findByCompanyId(companyid);
 
     return new NapiRespDTO(NapiStatus.SUCCESS, student);
   }
