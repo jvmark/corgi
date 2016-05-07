@@ -20,7 +20,7 @@ public interface RecruitmentRepository extends JpaRepository<Recruitment, Long> 
 
   Recruitment findById(Long id);
 
-  Recruitment findByCity(String city);
+  List<Recruitment> findByCity(String city);
 
   List<Recruitment> findByCompanyId(Long companyId);
 }

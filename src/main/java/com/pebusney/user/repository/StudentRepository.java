@@ -7,6 +7,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * @author mark
  * @since 2016-04-21 17:08.
@@ -22,7 +24,7 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
 
   Student findBySno(String sno);
 
-  Student findByClassName(String className);
+  List<Student> findByClassName(String className);
 
-  Student findByMajor(String major);
+  List<Student> findByMajor(String major);
 }

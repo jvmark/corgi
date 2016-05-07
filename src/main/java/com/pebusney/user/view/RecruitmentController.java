@@ -46,7 +46,7 @@ public class RecruitmentController {
   public NapiRespDTO findByCity(
       @RequestParam(value = "city", required = true) String city
   ) {
-    Recruitment student = recruitmentRepository.findByCity(city);
+    List<Recruitment> student = recruitmentRepository.findByCity(city);
 
     return new NapiRespDTO(NapiStatus.SUCCESS, student);
   }

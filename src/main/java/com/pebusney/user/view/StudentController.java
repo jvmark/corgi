@@ -64,7 +64,7 @@ public class StudentController {
   public NapiRespDTO findByClasName(
       @RequestParam(value = "class_name", required = true) String className
   ) {
-    Student student = studentRepository.findByClassName(className);
+    List<Student> student = studentRepository.findByClassName(className);
 
     return new NapiRespDTO(NapiStatus.SUCCESS, student);
   }
@@ -73,7 +73,7 @@ public class StudentController {
   public NapiRespDTO findByMajor(
       @RequestParam(value = "major", required = true) String major
   ) {
-    Student student = studentRepository.findByMajor(major);
+    List<Student> student = studentRepository.findByMajor(major);
 
     return new NapiRespDTO(NapiStatus.SUCCESS, student);
   }
